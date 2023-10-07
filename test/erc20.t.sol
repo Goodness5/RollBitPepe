@@ -69,15 +69,15 @@ function testBurn() public {
     vm.stopPrank();
 }
 
-function testMint() public {
-    vm.startPrank(_assetowner);
-    uint256 initialSupply = token.totalSupply();
-    uint256 mintAmount = 1000 ether;
-    token.mint(_assetowner, mintAmount);
-    uint256 finalSupply = token.totalSupply();
-    assertEq(finalSupply, initialSupply + mintAmount, "Mint failed");
-    vm.stopPrank();
-}
+// function testMint() public {
+//     vm.startPrank(_assetowner);
+//     uint256 initialSupply = token.totalSupply();
+//     uint256 mintAmount = 1000 ether;
+//     token.mint(_assetowner, mintAmount);
+//     uint256 finalSupply = token.totalSupply();
+//     assertEq(finalSupply, initialSupply + mintAmount, "Mint failed");
+//     vm.stopPrank();
+// }
 
 function testIncreaseAllowance() public {
     vm.startPrank(_assetowner);

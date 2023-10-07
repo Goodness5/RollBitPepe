@@ -9,7 +9,7 @@ contract deployRollBitPepe is Script {
         string _name = "RollBitPepe";
         string _symbol = "$ROB";
         address _owner = msg.sender;
-        uint256 _supply = 100000000 ether;
+        uint256 _supply = 300000000 ether;
     function run() public {
         uint256 key = vm.envUint("private_key");
         vm.startBroadcast(key);
