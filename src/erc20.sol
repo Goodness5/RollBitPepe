@@ -12,7 +12,7 @@ contract RollBitPepe is ERC20 ,ERC20Burnable, Ownable {
         address initialOwner,
         uint256 initialSupply
     ) ERC20(name, symbol) {
-        _mint(initialOwner, initialSupply);
+        _mint(msg.sender, initialSupply);
         transferOwnership(initialOwner);
     }
     //   function mint(address account, uint256 amount) external onlyOwner {
